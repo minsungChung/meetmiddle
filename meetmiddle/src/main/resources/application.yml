@@ -1,4 +1,7 @@
 spring:
+  config:
+    import:
+      google.properties
   # DB 연결
   datasource:
     # 설치된 H2 DB와 연결 URL , 콘솔로 최초 접속시 JDBC URL : jdbc:h2:~/test 를 입력
@@ -19,7 +22,16 @@ spring:
   output:
     ansi:
       enabled: always
+  security:
+    oauth2:
+      google:
+        client-id: ${GOOGLE_CLIENT_ID}
+        client-secret: ${GOOGLE_CLIENT_SECRET}
+        redirect-uri: ${GOOGLE_REDIRECT_URI}
+        token-uri: ${GOOGLE_TOKEN_URI}
+
 # 파라미터 확인을 위한 trace
 logging:
   level:
     org.hibernate.type: trace
+
