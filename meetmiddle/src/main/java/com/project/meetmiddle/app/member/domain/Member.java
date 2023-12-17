@@ -3,18 +3,14 @@ package com.project.meetmiddle.app.member.domain;
 
 import com.project.meetmiddle.app.common.BaseEntity;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-
+import lombok.*;
 
 
 @Entity
 @Table(name = "members")
-@Builder
-@AllArgsConstructor(access = AccessLevel.PACKAGE)
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Member extends BaseEntity {
 
 

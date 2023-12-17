@@ -34,6 +34,6 @@ public abstract class BaseEntity {
     private LocalDateTime updateDate;
 
     @ColumnDefault("'ACTIVE'")
-    @Column(name = "status", nullable = false)
+    @Column(name = "status")
     private String status;
 }

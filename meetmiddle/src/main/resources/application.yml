@@ -29,6 +29,9 @@ spring:
         client-secret: ${GOOGLE_CLIENT_SECRET}
         redirect-uri: ${GOOGLE_REDIRECT_URI}
         token-uri: ${GOOGLE_TOKEN_URI}
+    jwt:
+      token:
+        secret-key: ${JWT_SECRET_KEY}
 
 # 파라미터 확인을 위한 trace
 logging:

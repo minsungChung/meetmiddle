@@ -1,6 +1,8 @@
 package com.project.meetmiddle.app.infrastructure.oauth.client;
 
+import com.project.meetmiddle.app.member.domain.Member;
+
 @FunctionalInterface
 public interface OAuthClient {
-    String getOAuthMember(final String code);
+    Member getOAuthMember(final String code);
 }
